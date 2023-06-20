@@ -178,11 +178,11 @@ SECTIONS
         . = ALIGN(4);
         __bss_end__ = .;
     } > RAM
-    .heap (NOLOAD):
+    ._user_heap_stack (NOLOAD):
     {
         __end__ = .;
         end = __end__;
-        *(.heap*);
+        *(._user_heap_stack*);
         ASSERT(. <= (ORIGIN(RAM) + LENGTH(RAM) - 0x800), "heap region overflowed into stack");
         . += (ORIGIN(RAM) + LENGTH(RAM) - 0x800) - .;
     } > RAM
