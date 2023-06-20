@@ -42,9 +42,9 @@
         "TOUCH_BUTTON_SENSITIVITY": 5,
         "USE_ACCEL_LSB": 0
     },
-    "cpp_flags": "-I/lib/arm-none-eabi/include -I/etc/alternatives/gcc-arm-none-eabi-include -I/usr/include/newlib/c++/10.3.1 -I/usr/include/newlib/c++/10.3.1/arm-none-eabi -std=c++11 -fwrapv -fno-rtti -fno-threadsafe-statics -fno-exceptions -fno-unwind-tables -Wl,--gc-sections -Wl,--sort-common -Wl,--sort-section=alignment -Wno-array-bounds -Wno-inconsistent-missing-override -Wno-overloaded-virtual -Wno-unused-private-field -Wno-unused-const-variable -Wno-unused-but-set-variable -Wno-unused-variable -Wno-mismatched-tags -Wno-uninitialized -Wno-deprecated-register -Wno-unknown-attributes",
+    "cpp_flags": "-I/lib/arm-none-eabi/include -I/etc/alternatives/gcc-arm-none-eabi-include -I/usr/include/newlib/c++/10.3.1 -I/usr/include/newlib/c++/10.3.1/arm-none-eabi -std=c++11 -fwrapv -fno-rtti -fno-threadsafe-statics -fno-exceptions -fno-unwind-tables -Wno-array-bounds -Wno-inconsistent-missing-override -Wno-overloaded-virtual -Wno-unused-private-field -Wno-unused-const-variable -Wno-unused-but-set-variable -Wno-unused-variable -Wno-mismatched-tags -Wno-uninitialized -Wno-deprecated-register -Wno-unknown-attributes",
     "cpu_opts": "--target=arm-none-eabi -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp",
-    "definitions": "-DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DNRF_DFU_TRANSPORT_BLE=1 -DNRF52833_XXAA -DNRF52833 -DTARGET_MCU_NRF52833 -DNRF5 -DNRF52833 -D__CORTEX_M4 -DS113 -DTOOLCHAIN_GCC -D__START=target_start",
+    "definitions": "-DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DNRF_DFU_TRANSPORT_BLE=1 -DNRF52833_XXAA -DNRF52833 -DTARGET_MCU_NRF52833 -DNRF5 -DNRF52833 -D__CORTEX_M4 -DS113 -DTOOLCHAIN_CLANG -D__START=target_start",
     "device": "MICROBIT",
     "generate_bin": true,
     "generate_hex": true,
@@ -68,7 +68,7 @@
             "url": "https://github.com/Johnn333/codal-microbit-nrf5sdk-clang"
         }
     ],
-    "linker_flags": "-Wl,--gc-sections -Wl,--wrap,atexit -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group",
+    "linker_flags": "-Xlinker -Wl,--gc-sections -Wl,--wrap,atexit -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group",
     "post_process": "",
     "processor": "NRF52833",
     "snapshot_version": "v0.2.55",
